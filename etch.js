@@ -11,7 +11,7 @@ function createMatrixSize(){
 }
 
 
-function createDivInMatrix(matrix){
+function createBoxInMatrix(matrix){
    
     //Select the overall container in the div
     const container = document.querySelector('#container');
@@ -22,6 +22,7 @@ function createDivInMatrix(matrix){
         */
         const divColumn = document.createElement('div');
         divColumn.setAttribute('id', 'column'+column);
+        divColumn.style.display = 'flex';
         container.appendChild(divColumn);
 
         /*
@@ -29,18 +30,16 @@ function createDivInMatrix(matrix){
         */
         for(let row =0; row<matrix[column].length; row++){
             const divRow = document.createElement('div');
+            
+            divRow.style.padding = '10px';
+            divRow.style.width =  '1px';
+            divRow.style.border = '1px solid black';
+
             matrix[column][row]= divRow;
             divColumn.appendChild(matrix[column][row]);
         }
     }
 }
 
-function createBox(matrix){
-
-    const container = document.querySelector('#container');
-
-
-}
-
 let matrix = createMatrixSize();
-createDivInMatrix(matrix);
+createBoxInMatrix(matrix);
