@@ -21,8 +21,8 @@ function createBoxInMatrix(matrix){
         *Goes through each column in the matrix and creates a new div and setting the id to the column
         */
         const divColumn = document.createElement('div');
-        divColumn.setAttribute('id', 'column'+column);
-        divColumn.style.display = 'flex';
+        divColumn.setAttribute('id', 'column');
+        divColumn.style.display = 'inline-block';
         container.appendChild(divColumn);
 
         /*
@@ -30,16 +30,31 @@ function createBoxInMatrix(matrix){
         */
         for(let row =0; row<matrix[column].length; row++){
             const divRow = document.createElement('div');
-            
-            divRow.style.padding = '10px';
-            divRow.style.width =  '1px';
-            divRow.style.border = '1px solid black';
-
+            divRow.classList.add('square');
             matrix[column][row]= divRow;
             divColumn.appendChild(matrix[column][row]);
         }
     }
 }
 
+function changeBackground(){
+
+   const square = document.querySelectorAll('.square');
+    square.forEach((square) => {
+        square.addEventListener('mouseover', ()=>{
+            square.setAttribute('style', 'background:black');
+        })
+    })
+}
+
+function changeBoxSize(){
+
+
+
+}
+
+
+
 let matrix = createMatrixSize();
 createBoxInMatrix(matrix);
+changeBackground();
