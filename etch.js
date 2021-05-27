@@ -65,8 +65,8 @@ function button(){
     const btn = document.querySelector('button');
     btn.addEventListener('click', ()=>{
         let size = parseInt(prompt("Please enter another number: "));
-        
-        if(size>64){
+        console.log(size);
+        if(size>64 || size == 0){
             alert("Please enter a number between 1-64");
             size= parseInt(prompt("Please enter another number: "));
         }
