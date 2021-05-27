@@ -1,13 +1,31 @@
 #container{
     position : relative;
-    border: 10px solid lightgray;
+    margin: 0%;
     text-align: center;
+}
+
+#btn{
+    position: relative;
+    text-align: center;
+}
+
+button{
+    font-family: monospace;
+    margin: 0%;
+    margin:10px 0px 40px 0px;
+    border-radius: 5px;
+    padding: 7px;
+}
+
+button:hover{
+    background-color: gray;
 }
 
 h2{
     font-family: monospace;
     position:relative;
     text-align: center;
+    margin: 30px 0px 30px 0px;
 }
 
 body{
@@ -15,8 +33,6 @@ body{
 }
 
 .square{
-    padding: 20px;
     margin: 0%;
-    width: 1px;
     border: 1px solid gray;
 }
